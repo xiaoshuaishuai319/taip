@@ -1,6 +1,6 @@
 package cn.xsshome.taip.speech;
 
-public class TAipSpeechConsts {
+public class SpeechConsts {
 	//语音识别-echo版
 	static final String SPEECH_ASR_AAI = "https://api.ai.qq.com/fcgi-bin/aai/aai_asr";
 	//语音识别-流式版（AI Lab）

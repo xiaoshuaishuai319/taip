@@ -37,7 +37,7 @@ public class TAipSpeech extends BaseClient{
         params.put("rate",Integer.toString(rate));
         String sign = TencentAISignSort.getSignature(params,app_key);
 		params.put("sign",sign);
-        result = HttpUtil.post(TAipSpeechConsts.SPEECH_ASR_AAI,TencentAISignSort.getParams(params));
+        result = HttpUtil.post(SpeechConsts.SPEECH_ASR_AAI,TencentAISignSort.getParams(params));
         return result;
     }
 	 /**
@@ -73,7 +73,7 @@ public class TAipSpeech extends BaseClient{
         params.put("format", Integer.toString(format));
         String sign = TencentAISignSort.getSignature(params,app_key);
 		params.put("sign",sign);
-        result = HttpUtil.post(TAipSpeechConsts.SPEECH_ASR_AAI,TencentAISignSort.getParams(params));
+        result = HttpUtil.post(SpeechConsts.SPEECH_ASR_AAI,TencentAISignSort.getParams(params));
         return result;
     }
 	 /**
@@ -116,7 +116,7 @@ public class TAipSpeech extends BaseClient{
 		params.put("speech_chunk", speech_chunk);
         String sign = TencentAISignSort.getSignature(params,app_key);
 		params.put("sign",sign);
-        result = HttpUtil.post(TAipSpeechConsts.SPEECH_ASR_AAIS,TencentAISignSort.getParams(params));
+        result = HttpUtil.post(SpeechConsts.SPEECH_ASR_AAIS,TencentAISignSort.getParams(params));
         return result;
     }
     /**
@@ -184,7 +184,7 @@ public class TAipSpeech extends BaseClient{
 		params.put("speech_chunk", speech_chunk);
         String sign = TencentAISignSort.getSignature(params,app_key);
 		params.put("sign",sign);
-        result = HttpUtil.post(TAipSpeechConsts.SPEECH_ASR_WX,TencentAISignSort.getParams(params));
+        result = HttpUtil.post(SpeechConsts.SPEECH_ASR_WX,TencentAISignSort.getParams(params));
         return result;
     }
 	 /**

@@ -4,7 +4,7 @@ package cn.xsshome.taip.imageclassify;
  * @author 小帅丶
  * @version 1.1.2
  */
-public class TAipImageClassifyConsts {
+public class ImageClassifyConsts {
 	// 场景识别
 	static final String ICR_VISION_SCENER = "https://api.ai.qq.com/fcgi-bin/vision/vision_scener";
 	// 物体识别

@@ -19,7 +19,7 @@ import cn.xsshome.taip.util.TransConstant;
 public class TencentAISignSort {
 	/**
 	 * SIGN签名生成算法-JAVA版本
-	 * @param HashMap<String,String> params 请求参数集，所有参数必须已转换为字符串类型
+	 * @param  params 请求参数集，所有参数必须已转换为字符串类型
 	 * @param app_key 
 	 * @return String
 	 * @throws IOException
@@ -48,10 +48,9 @@ public class TencentAISignSort {
 	        }
 	    }
 	/**
-	 * SIGN签名生成算法针对文本进行翻译的处理-JAVA版本
-	 * @param HashMap<String,String> params 请求参数集，所有参数必须已转换为字符串类型
+	 * SIGN签名生成算法针对文本进行翻译的处理-JAVA版本 针对于输入的源语言和目标语言进行了判断
+	 * @param  params 请求参数集，所有参数必须已转换为字符串类型
 	 * @return 签名
-	 * @remark 针对于输入的源语言和目标语言进行了判断
 	 * @throws Exception 
 	 */
 	public static String getSignature4TransText(HashMap<String,String> params) throws Exception {
@@ -224,7 +223,7 @@ public class TencentAISignSort {
 	    }
 	/**
 	 * SIGN签名生成算法-JAVA版本
-	 * @param HashMap<String,String> params 请求参数集，所有参数必须已转换为字符串类型
+	 * @param  params 请求参数集，所有参数必须已转换为字符串类型
 	 * @return 签名
 	 * @throws IOException
 	 */
@@ -259,7 +258,7 @@ public class TencentAISignSort {
 	/**
 	 * 获取拼接的参数
 	 * @param params
-	 * @return
+	 * @return String
 	 * @throws IOException
 	 */
 	public static String getParams(HashMap<String,String> params) throws IOException {
@@ -277,7 +276,7 @@ public class TencentAISignSort {
 	/**
 	 * 获取拼接的参数forNLP
 	 * @param params
-	 * @return
+	 * @return String
 	 * @throws IOException
 	 */
 	public static String getParamsforNLP(HashMap<String,String> params) throws IOException {

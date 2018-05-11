@@ -4,7 +4,7 @@ package cn.xsshome.taip.ocr;
  * @author 小帅丶
  * @version 0.0.1
  */
-public class TAiOcrConsts {
+public class OcrConsts {
 	//身份证识别
 	static final String OCR_IDCARD = "https://api.ai.qq.com/fcgi-bin/ocr/ocr_idcardocr";
 	//通用OCR识别

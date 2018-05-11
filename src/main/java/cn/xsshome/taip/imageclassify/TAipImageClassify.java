@@ -40,7 +40,7 @@ public class TAipImageClassify extends BaseClient{
         params.put("topk",Integer.toString(topk));
         String sign = TencentAISignSort.getSignature(params,app_key);
 		params.put("sign",sign);
-        result = HttpUtil.post(TAipImageClassifyConsts.ICR_VISION_SCENER,TencentAISignSort.getParams(params));
+        result = HttpUtil.post(ImageClassifyConsts.ICR_VISION_SCENER,TencentAISignSort.getParams(params));
         return result;
     }
     /**
@@ -78,7 +78,7 @@ public class TAipImageClassify extends BaseClient{
         params.put("topk",Integer.toString(topk));
         String sign = TencentAISignSort.getSignature(params,app_key);
 		params.put("sign",sign);
-        result = HttpUtil.post(TAipImageClassifyConsts.ICR_VISION_OBJECTR,TencentAISignSort.getParams(params));
+        result = HttpUtil.post(ImageClassifyConsts.ICR_VISION_OBJECTR,TencentAISignSort.getParams(params));
         return result;
     }
     /**
@@ -112,7 +112,7 @@ public class TAipImageClassify extends BaseClient{
         params.put("image", base64Content);
         String sign = TencentAISignSort.getSignature(params,app_key);
 		params.put("sign",sign);
-        result = HttpUtil.post(TAipImageClassifyConsts.ICR_IMAGE_TAG,TencentAISignSort.getParams(params));
+        result = HttpUtil.post(ImageClassifyConsts.ICR_IMAGE_TAG,TencentAISignSort.getParams(params));
         return result;
     }
     /**
@@ -146,7 +146,7 @@ public class TAipImageClassify extends BaseClient{
         params.put("scene", Integer.toString(scene));
         String sign = TencentAISignSort.getSignature(params,app_key);
 		params.put("sign",sign);
-        result = HttpUtil.post(TAipImageClassifyConsts.ICR_VISION_IMGIDENTIFY,TencentAISignSort.getParams(params));
+        result = HttpUtil.post(ImageClassifyConsts.ICR_VISION_IMGIDENTIFY,TencentAISignSort.getParams(params));
         return result;
     }
     /**
@@ -180,7 +180,7 @@ public class TAipImageClassify extends BaseClient{
         params.put("scene", "2");
         String sign = TencentAISignSort.getSignature(params,app_key);
 		params.put("sign",sign);
-        result = HttpUtil.post(TAipImageClassifyConsts.ICR_VISION_IMGIDENTIFY,TencentAISignSort.getParams(params));
+        result = HttpUtil.post(ImageClassifyConsts.ICR_VISION_IMGIDENTIFY,TencentAISignSort.getParams(params));
         return result;
     }
     /**
@@ -213,7 +213,7 @@ public class TAipImageClassify extends BaseClient{
         params.put("scene", "1");
         String sign = TencentAISignSort.getSignature(params,app_key);
 		params.put("sign",sign);
-        result = HttpUtil.post(TAipImageClassifyConsts.ICR_VISION_IMGIDENTIFY,TencentAISignSort.getParams(params));
+        result = HttpUtil.post(ImageClassifyConsts.ICR_VISION_IMGIDENTIFY,TencentAISignSort.getParams(params));
         return result;
     }
     /**
@@ -247,7 +247,7 @@ public class TAipImageClassify extends BaseClient{
         params.put("session_id", session_id);
         String sign = TencentAISignSort.getSignature(params,app_key);
 		params.put("sign",sign);
-        result = HttpUtil.post(TAipImageClassifyConsts.ICR_VISION_IMGTOTEXT,TencentAISignSort.getParams(params));
+        result = HttpUtil.post(ImageClassifyConsts.ICR_VISION_IMGTOTEXT,TencentAISignSort.getParams(params));
         return result;
     }
     /**
@@ -280,7 +280,7 @@ public class TAipImageClassify extends BaseClient{
         params.put("image", base64Content);
         String sign = TencentAISignSort.getSignature(params,app_key);
 		params.put("sign",sign);
-        result = HttpUtil.post(TAipImageClassifyConsts.ICR_IMAGE_FUZZY,TencentAISignSort.getParams(params));
+        result = HttpUtil.post(ImageClassifyConsts.ICR_IMAGE_FUZZY,TencentAISignSort.getParams(params));
         return result;
     }
     /**
@@ -312,7 +312,7 @@ public class TAipImageClassify extends BaseClient{
         params.put("image", base64Content);
         String sign = TencentAISignSort.getSignature(params,app_key);
 		params.put("sign",sign);
-        result = HttpUtil.post(TAipImageClassifyConsts.ICR_IMAGE_FOOD,TencentAISignSort.getParams(params));
+        result = HttpUtil.post(ImageClassifyConsts.ICR_IMAGE_FOOD,TencentAISignSort.getParams(params));
         return result;
     }
     /**

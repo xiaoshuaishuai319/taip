@@ -36,7 +36,7 @@ public class TAipOcr extends BaseClient{
         params.put("image", base64Content);
         String sign = TencentAISignSort.getSignature(params,app_key);
 		params.put("sign",sign);
-        result = HttpUtil.post(TAiOcrConsts.OCR_GENERAL,TencentAISignSort.getParams(params));
+        result = HttpUtil.post(OcrConsts.OCR_GENERAL,TencentAISignSort.getParams(params));
         return result;
     }
     /**
@@ -70,7 +70,7 @@ public class TAipOcr extends BaseClient{
         params.put("image", base64Content);
         String sign = TencentAISignSort.getSignature(params,app_key);
 		params.put("sign",sign);
-        result = HttpUtil.post(TAiOcrConsts.OCR_IDCARD,TencentAISignSort.getParams(params));
+        result = HttpUtil.post(OcrConsts.OCR_IDCARD,TencentAISignSort.getParams(params));
         return result;
     }
     /**
@@ -103,7 +103,7 @@ public class TAipOcr extends BaseClient{
         params.put("image", base64Content);
         String sign = TencentAISignSort.getSignature(params,app_key);
 		params.put("sign",sign);
-        result = HttpUtil.post(TAiOcrConsts.OCR_BCOCR,TencentAISignSort.getParams(params));
+        result = HttpUtil.post(OcrConsts.OCR_BCOCR,TencentAISignSort.getParams(params));
         return result;
     }
     /**
@@ -135,7 +135,7 @@ public class TAipOcr extends BaseClient{
         params.put("image", base64Content);
         String sign = TencentAISignSort.getSignature(params,app_key);
 		params.put("sign",sign);
-        result = HttpUtil.post(TAiOcrConsts.OCR_DRIVERLICENSEOCR,TencentAISignSort.getParams(params));
+        result = HttpUtil.post(OcrConsts.OCR_DRIVERLICENSEOCR,TencentAISignSort.getParams(params));
         return result;
     }
     /**
@@ -167,7 +167,7 @@ public class TAipOcr extends BaseClient{
         params.put("image", base64Content);
         String sign = TencentAISignSort.getSignature(params,app_key);
 		params.put("sign",sign);
-        result = HttpUtil.post(TAiOcrConsts.OCR_BIZLICENSE,TencentAISignSort.getParams(params));
+        result = HttpUtil.post(OcrConsts.OCR_BIZLICENSE,TencentAISignSort.getParams(params));
         return result;
     }
     /**
@@ -199,7 +199,7 @@ public class TAipOcr extends BaseClient{
 		params.put("image", base64Content);
 		String sign = TencentAISignSort.getSignature(params, app_key);
 		params.put("sign", sign);
-		result = HttpUtil.post(TAiOcrConsts.OCR_BANK,TencentAISignSort.getParams(params));
+		result = HttpUtil.post(OcrConsts.OCR_BANK,TencentAISignSort.getParams(params));
 		return result;
 	}
    /**

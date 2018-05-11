@@ -2,17 +2,9 @@ package cn.xsshome.taip.http;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
 
 
 /**
@@ -38,17 +30,8 @@ public class HttpUtil {
         out.close();
         // 建立实际的连接
         connection.connect();
-        // 获取所有响应头字段
-        Map<String, List<String>> headers = connection.getHeaderFields();
-        // 遍历所有的响应头字段
-        for (String key : headers.keySet()) {
-            System.out.println(key + "--->" + headers.get(key));
-        }
         // 定义 BufferedReader输入流来读取URL的响应
         BufferedReader in = null;
-//        if (requestUrl.contains("nlp"))
-//            in = new BufferedReader(new InputStreamReader(connection.getInputStream(), "GBK"));
-//        else
         in = new BufferedReader(new InputStreamReader(connection.getInputStream(), "UTF-8"));
         String result = "";
         String getLine;

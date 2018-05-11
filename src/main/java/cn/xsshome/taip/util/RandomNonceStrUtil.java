@@ -8,9 +8,8 @@ import java.util.Random;
  */
 public class RandomNonceStrUtil {
 	/**
-	 * DECORATION
 	 * @param length 表示生成字符串的长度  
-	 * @return
+	 * @return String
 	 */
 	public static String getRandomString(int length) {
 	    String base = "abcdefghijklmnopqrstuvwxyz0123456789";     
@@ -24,7 +23,7 @@ public class RandomNonceStrUtil {
 	 }
 	/**
 	 * DECORATION 定长
-	 * @return
+	 * @return String
 	 */
 	public static String getRandomString() {
 	    String base = "abcdefghijklmnopqrstuvwxyz0123456789";     
