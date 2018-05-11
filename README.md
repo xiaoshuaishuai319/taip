@@ -1,4 +1,10 @@
-OCR Java SDK目录结构
+[![Version](https://img.shields.io/badge/version-4.1.0-brightgreen.svg)](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22hutool-all%22)
+[![License](http://img.shields.io/:license-apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
+[![JDK 1.7](https://img.shields.io/badge/JDK-1.7-green.svg "JDK 1.7")]()
+
+文档请移步:[http://taip.mydoc.io/](http://taip.mydoc.io/)
+
+TAip Java SDK目录结构
 ```
 cn.xsshome.taip
        ├── base                                //基类
