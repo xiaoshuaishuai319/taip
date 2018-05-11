@@ -29,7 +29,18 @@ cn.xsshome.taip
 
 4.添加SDK工具包tai-java-sdk-version.jar。
 
-其中，version为版本号，添加完成后，用户就可以在工程中使用腾讯AIJava SDK。	   
+其中，version为版本号，添加完成后，用户就可以在工程中使用腾讯AIJava SDK。	
+
+### maven引入
+
+```
+<dependency>
+  <groupId>cn.xsshome</groupId>
+  <artifactId>taip</artifactId>
+  <version>4.1.0</version>
+</dependency>
+```
+   
 ### OCR示例代码
 
 
