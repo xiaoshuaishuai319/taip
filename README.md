@@ -17,7 +17,7 @@ cn.xsshome.taip
        └── util                                //工具类
 ```
 	   
-支持 JAVA版本：1.7+
+ **支持 JAVA版本：1.7+** 
 
 直接使用JAR包步骤如下：
 
@@ -30,7 +30,8 @@ cn.xsshome.taip
 4.添加SDK工具包tai-java-sdk-version.jar。
 
 其中，version为版本号，添加完成后，用户就可以在工程中使用腾讯AIJava SDK。	   
-#OCR示例代码
+### OCR示例代码
+
 
 新建TAipOcr
 TAipOcr是调用腾讯AI中OCR的Java客户端，为调用腾讯AI中OCR功能的开发人员提供了一系列的交互方法。
@@ -53,7 +54,8 @@ public class Sample {
     }
 }
 ```
-#ASR示例代码
+### ASR示例代码
+
 
 新建TAipOcr
 TAipOcr是调用腾讯AI中语音识别的Java客户端，为调用腾讯AI中语音识别功能的开发人员提供了一系列的交互方法。
@@ -80,7 +82,8 @@ public class Sample {
 }
 ```
 
-#图像识别 示例代码
+### 图像识别 示例代码
+
 
 TAipImageClassify是调用腾讯AI中图像识别的Java客户端，为调用腾讯AI中图像识别功能的开发人员提供了一系列的交互方法。
 
@@ -113,7 +116,8 @@ public class Sample {
 }
 ```
 
-#图片特效
+### 图片特效
+
 
 TAipPtu是调用腾讯AI中图片特效的Java客户端，为调用腾讯AI中图片特效功能的开发人员提供了一系列的交互方法。
 
@@ -144,7 +148,8 @@ public class Sample{
 
 ```
 
-#人脸识别
+### 人脸识别
+
 
 TAipFace是调用腾讯AI中人脸识别的Java客户端，为调用腾讯AI中人脸识别功能的开发人员提供了一系列的交互方法。
 
