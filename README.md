@@ -1,14 +1,19 @@
-[![Version](https://img.shields.io/badge/version-4.1.0-brightgreen.svg)](http://mvnrepository.com/search?q=taip)
+[![Version](https://img.shields.io/badge/version-4.2.2-brightgreen.svg)](http://mvnrepository.com/search?q=taip)
 [![License](http://img.shields.io/:license-apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
 [![JDK 1.7](https://img.shields.io/badge/JDK-1.7-green.svg "JDK 1.7")]()
 
 文档请移步:[http://taip.mydoc.io/](http://taip.mydoc.io/)
+
+最新代码更新在码云(Gitee):https://gitee.com/xshuai/taip/
+QQ:783021975
+
 
 TAip Java SDK目录结构
 ```
 cn.xsshome.taip
        ├── base                                //基类
        ├── http                                //Http通信相关类
+       ├── error                                //SDK错误类
        ├── imageclassify
        │       └── TAipImageClassify           //TAipImageClassify类
        ├── sign                                //签名公用类
@@ -20,10 +25,14 @@ cn.xsshome.taip
        │       └── TAipFace                   //TAipFace类
        ├── ptu
        │       └── TAipPtu                   //TAipPtu类
+       ├── nlp
+       │       └── TAipNlp                   //TAipNlp类
+       ├── vision
+       │       └── TAipVision                   //TAipVision类
        └── util                                //工具类
 ```
-	   
- **支持 JAVA版本：1.7+** 
+       
+ **支持 JAVA版本：1.7+**
 
 直接使用JAR包步骤如下：
 
@@ -35,7 +44,7 @@ cn.xsshome.taip
 
 4.添加SDK工具包tai-java-sdk-version.jar。
 
-其中，version为版本号，添加完成后，用户就可以在工程中使用腾讯AIJava SDK。	
+其中，version为版本号，添加完成后，用户就可以在工程中使用腾讯AIJava SDK。    
 
 ### maven引入
 
@@ -43,7 +52,7 @@ cn.xsshome.taip
 <dependency>
   <groupId>cn.xsshome</groupId>
   <artifactId>taip</artifactId>
-  <version>4.1.0</version>
+  <version>4.2.2</version>
 </dependency>
 ```
    
@@ -65,17 +74,22 @@ public class Sample {
         // 初始化一个TAipOcr
        TAipOcr aipOcr = new TAipOcr(APP_ID,APP_KEY);
         // 调用接口
-        String path = "test.jpg";
-        String result = aipOcr.bcOcr(path);
-        System.out.println(result);
+        String result = aipOcr.idcardOcr("./idcard.jpg", 0);//身份证正面(图片)识别
+        String result = aipOcr.idcardOcr("./idcard2.jpg", 1);//身份证反面(国徽)识别
+        String result = aipOcr.bcOcr("./juli2.jpg");//名片识别
+        String result = aipOcr.driverlicenseOcr("./driver.jpg",0);//行驶证OCR识别
+        String result = aipOcr.driverlicenseOcr("./driver2.jpg",1);//驾驶证OCR识别
+        String result = aipOcr.bizlicenseOcr("./biz.jpg");//营业执照OCR识别
+        String result = aipOcr.creditcardOcr("./bank2.jpg");//银行卡OCR识别
+        String result = aipOcr.generalOcr("./biz.jpg");//通用OCR识别
     }
 }
 ```
-### ASR示例代码
+### ASR、TTS示例代码
 
 
-新建TAipOcr
-TAipOcr是调用腾讯AI中语音识别的Java客户端，为调用腾讯AI中语音识别功能的开发人员提供了一系列的交互方法。
+新建TAipSpeech
+TAipSpeech是调用腾讯AI中语音识别、合成的Java客户端，为调用腾讯AI中语音识别、合成功能的开发人员提供了一系列的交互方法。
 
 用户可以参考如下代码新建一个TAipSpeech,初始化完成后建议单例使用：
 
@@ -94,6 +108,12 @@ public class Sample {
         String result = aipSpeech.asrEcho(filePath, 1);//语音识别-echo版
         String result = aipSpeech.asrLab(1, 16000, 0, 1024, 1, audio);//语音识别-流式版（AI Lab）
         String result = aipSpeech.asrWx(filePath, 1, 16000, 16, 0, 1024, 1, 1);//语音识别-流式版(WeChat AI)
+        String text = "小帅封装代码";
+        String result = aipSpeech.TtaSynthesis(text);//语音合成（优图）     默认参数
+        String result = aipSpeech.TtaSynthesis(text,2,1);//语音合成（优图）     全部参数
+        String result = aipSpeech.TtsSynthesis(text, 1, 3);//语音合成（AI Lab） 默认参数
+        String result = aipSpeech.TtsSynthesis(text,1,3,0,100,0,58);//语音合成（AI Lab） 全部参数
+        String result = aipSpeech.asrLong("G:/16.pcm", 1, "http://yourwebsitename.com/methodname");//长语音识别
         System.out.println(result);
     }
 }
@@ -222,3 +242,58 @@ public class Sample{
 
 
 ```
+
+### 自然语言处理
+
+TAipNlp是调用腾讯AI中自然语言处理的Java客户端，为调用腾讯AI中自然语言处理功能的开发人员提供了一系列的交互方法。
+
+
+用户可以参考如下代码新建一个 TAipNlp，初始化完成后建议单例使用：
+
+```
+public class Sample{
+    public static final String APP_ID = "你的 App ID";
+    public static final String APP_KEY = "你的 Api Key";
+    public static void main2(String[] args) throws Exception {
+        TAipNlp aipNlp = new TAipNlp(APP_ID, APP_KEY);
+        String session = new Date().getTime()/1000+"";
+        String filePath = "G:/tt.jpg";
+        String filePath2 = "G:/16.pcm";
+        String result = aipNlp.nlpWordseg("小帅开发者");//分词
+        String result = aipNlp.nlpWordpos("小帅是一个热心的开发者");//词性标注
+        String result = aipNlp.nlpWordner("最近张学友在深圳开了一场演唱会");//专有名词
+        String result = aipNlp.nlpWordsyn("今天的天气怎么样");//同义词
+        String result = aipNlp.nlpWordcom("今天深圳的天气怎么样？明天呢");//意图成分
+        String result = aipNlp.nlpTextpolar("小帅很帅");//情感分析
+        String result = aipNlp.nlpTextchat(session,"北京天气");//基础闲聊     
+        String result = aipNlp.nlpTextTrans(0, "小帅开发者");//文本翻译（AI Lab）
+        String result = aipNlp.nlpTextTranslate("小帅开发者", "zh", "en");//文本翻译（翻译君）     
+        String result = aipNlp.nlpImageTranslate(filePath, session, "doc","zh", "en");//图片翻译
+        String result = aipNlp.nlpSpeechTranslate(6, 0, 1, session, filePath2,"zh", "en");//语音翻译     
+        String result = aipNlp.nlpTextDetect("こんにちは", 0);//语种识别
+        System.out.println(result);
+    }
+}
+```
+
+### 智能鉴黄、暴恐图片识别
+
+TAipVision是调用腾讯AI中智能鉴黄、暴恐图片识别的Java客户端，为调用腾讯AI中智能鉴黄、暴恐图片识别功能的开发人员提供了一系列的交互方法。
+
+
+用户可以参考如下代码新建一个 TAipVision，初始化完成后建议单例使用：
+
+```
+public class Sample{
+    public static final String APP_ID = "你的 App ID";
+    public static final String APP_KEY = "你的 Api Key";
+    public static void main2(String[] args) throws Exception {
+        TAipVision aipVision = new TAipVision（APP_ID, APP_KEY);
+        String filePath = "G:/tt.jpg";
+        String result = aipVision.imageTerrorism(filePath);//暴恐图片
+        String result = aipVision.visionPorn(filePath);//智能鉴黄
+        System.out.println(result);
+    }
+}
+```
+
