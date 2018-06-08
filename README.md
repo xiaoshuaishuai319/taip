@@ -4,6 +4,8 @@
 
 文档请移步:[http://taip.mydoc.io/](http://taip.mydoc.io/)
 
+APPID APPKEY 是腾讯AI创建应用后得到。请移步腾讯AI官网获取哦。[https://ai.qq.com/](https://ai.qq.com/)
+
 最新代码更新在码云(Gitee):https://gitee.com/xshuai/taip/ QQ:783021975
 
 QQ:783021975
@@ -53,7 +55,7 @@ cn.xsshome.taip
 <dependency>
   <groupId>cn.xsshome</groupId>
   <artifactId>taip</artifactId>
-  <version>4.2.2</version>
+  <version>4.2.3</version>
 </dependency>
 ```
    
