@@ -1,6 +1,8 @@
 [![Version](https://img.shields.io/badge/version-4.2.3-brightgreen.svg)](http://mvnrepository.com/search?q=taip)
 [![License](http://img.shields.io/:license-apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
 [![JDK 1.7](https://img.shields.io/badge/JDK-1.7-green.svg "JDK 1.7")]()
+[![WiKi](https://img.shields.io/readthedocs/pip.svg)](https://apidoc.gitee.com/xshuai/taip/)
+[![作者](https://img.shields.io/badge/%E4%BD%9C%E8%80%85-%E5%B0%8F%E5%B8%85%E4%B8%B6-7AD6FD.svg)](https://www.xsshome.cn/)
 
 文档请移步:[http://taip.mydoc.io/](http://taip.mydoc.io/)
 
