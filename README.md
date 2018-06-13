@@ -1,4 +1,4 @@
-[![Version](https://img.shields.io/badge/version-4.2.3-brightgreen.svg)](http://mvnrepository.com/search?q=taip)
+[![Version](https://img.shields.io/badge/version-4.2.5-brightgreen.svg)](http://mvnrepository.com/search?q=taip)
 [![License](http://img.shields.io/:license-apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
 [![JDK 1.7](https://img.shields.io/badge/JDK-1.7-green.svg "JDK 1.7")]()
 [![WiKi](https://img.shields.io/readthedocs/pip.svg)](https://apidoc.gitee.com/xshuai/taip/)
@@ -57,7 +57,7 @@ cn.xsshome.taip
 <dependency>
   <groupId>cn.xsshome</groupId>
   <artifactId>taip</artifactId>
-  <version>4.2.3</version>
+  <version>4.2.5</version>
 </dependency>
 ```
    
@@ -87,6 +87,10 @@ public class Sample {
         String result = aipOcr.bizlicenseOcr("./biz.jpg");//营业执照OCR识别
         String result = aipOcr.creditcardOcr("./bank2.jpg");//银行卡OCR识别
         String result = aipOcr.generalOcr("./biz.jpg");//通用OCR识别
+        String result = aipOcr.handWritingOcrByImage("./biz.jpg");//手写体识别 选取本地图片文件识别
+        String result = aipOcr.handWritingOcrByUrl("https://yyb.gtimg.com/ai/assets/ai-demo/small/hd-1-sm.jpg");//手写体识别 选取网络图片URL识别
+        String result = aipOcr.plateOcrByImage("./biz.jpg");//车牌识别 选取本地图片文件识别
+        String result = aipOcr.plateOcrByUrl("https://yyb.gtimg.com/ai/assets/ai-demo/large/plate-1-lg.jpg");//车牌识别 选取网络图片URL识别                               
     }
 }
 ```
