@@ -1,4 +1,5 @@
 [![Version](https://img.shields.io/badge/version-4.2.5-brightgreen.svg)](http://mvnrepository.com/search?q=taip)
+[![Download](https://img.shields.io/badge/download-v4.2.5jar-brightgreen.svg(http://central.maven.org/maven2/cn/xsshome/taip/4.2.5/taip-4.2.5.jar)
 [![License](http://img.shields.io/:license-apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
 [![JDK 1.7](https://img.shields.io/badge/JDK-1.7-green.svg "JDK 1.7")]()
 [![WiKi](https://img.shields.io/readthedocs/pip.svg)](https://apidoc.gitee.com/xshuai/taip/)
@@ -41,7 +42,7 @@ cn.xsshome.taip
 
 直接使用JAR包步骤如下：
 
-1.在腾讯AIQQ群下载Java SDK压缩工具包。
+1.在腾讯AIQQ群下载Java SDK压缩工具包或点击download图标进行下载最新jar。
 
 2.将下载的tai-java-sdk-version.zip解压后，复制到工程文件夹中。
 
