@@ -1,5 +1,5 @@
-[![Version](https://img.shields.io/badge/version-4.2.5-brightgreen.svg)](http://mvnrepository.com/search?q=taip)
-[![Download](https://img.shields.io/badge/download-v4.2.5jar-brightgreen.svg)](http://central.maven.org/maven2/cn/xsshome/taip/4.2.5/taip-4.2.5.jar)
+[![Version](https://img.shields.io/badge/version-4.3.1-brightgreen.svg)](http://mvnrepository.com/search?q=taip)
+[![Download](https://img.shields.io/badge/download-v4.3.1jar-brightgreen.svg)](https://oss.sonatype.org/service/local/artifact/maven/redirect?r=releases&g=cn.xsshome&a=taip&v=4.3.1&e=jar)
 [![License](http://img.shields.io/:license-apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
 [![JDK 1.7](https://img.shields.io/badge/JDK-1.7-green.svg "JDK 1.7")]()
 [![WiKi](https://img.shields.io/readthedocs/pip.svg)](https://apidoc.gitee.com/xshuai/taip/)
@@ -58,8 +58,30 @@ cn.xsshome.taip
 <dependency>
   <groupId>cn.xsshome</groupId>
   <artifactId>taip</artifactId>
-  <version>4.2.5</version>
+  <version>4.3.1</version>
 </dependency>
+```
+### 网络设置示例代码
+
+```
+public class Sample {
+    //设置APPID/APP_KEY
+    public static final String APP_ID = "你的 App ID";
+    public static final String APP_KEY = "你的 Api Key";
+
+    public static void main(String[] args) {
+        // 初始化一个TAip[xxx] xxx代表具体的模块名称
+        TAip[xxx] client = new TAip[xxx](APP_ID,APP_KEY);
+        // 可选：设置网络连接参数
+        client.setConnectionTimeoutInMillis(2000);
+        client.setSocketTimeoutInMillis(60000);
+         // 可选：设置代理服务器地址, http和socket二选一，或者均不设置
+        client.setHttpProxy("proxy_host", proxy_port);  // 设置http代理
+        client.setSocketProxy("proxy_host", proxy_port);  // 设置socket代理
+        //调用接口
+        client.[xxxxx]("图片路径");
+    }
+}
 ```
    
 ### OCR示例代码
@@ -89,7 +111,7 @@ public class Sample {
         String result = aipOcr.creditcardOcr("./bank2.jpg");//银行卡OCR识别
         String result = aipOcr.generalOcr("./biz.jpg");//通用OCR识别
         String result = aipOcr.handWritingOcrByImage("./biz.jpg");//手写体识别 选取本地图片文件识别
-        String result = aipOcr.handWritingOcrByUrl("https://yyb.gtimg.com/ai/assets/ai-demo/small/hd-1-sm.jpg");//手写体识别 选取网络图片URL识别
+        String result = aipOcr.handWritingOcrByUrl("https://yyb.gtimg.com/ai/assets/ai-demo/small/hd-1-sm.jpg");//手写体识别 选取网络图片URL识别 
         String result = aipOcr.plateOcrByImage("./biz.jpg");//车牌识别 选取本地图片文件识别
         String result = aipOcr.plateOcrByUrl("https://yyb.gtimg.com/ai/assets/ai-demo/large/plate-1-lg.jpg");//车牌识别 选取网络图片URL识别                               
     }
