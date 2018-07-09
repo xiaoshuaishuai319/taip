@@ -5,13 +5,13 @@
 [![WiKi](https://img.shields.io/readthedocs/pip.svg)](https://apidoc.gitee.com/xshuai/taip/)
 [![作者](https://img.shields.io/badge/%E4%BD%9C%E8%80%85-%E5%B0%8F%E5%B8%85%E4%B8%B6-7AD6FD.svg)](https://www.xsshome.cn/)
 
-# 最新代码更新在码云(Gitee):https://gitee.com/xshuai/taip/ QQ:783021975
+# 最新代码更新在码云(Gitee):https://gitee.com/xshuai/taip/ 
+# 有问题联系 QQ:783021975
 
 文档请移步:[http://taip.mydoc.io/](http://taip.mydoc.io/)
 
 APPID APPKEY 是腾讯AI创建应用后得到。请移步腾讯AI官网获取哦。[https://ai.qq.com/](https://ai.qq.com/)
 
-QQ:783021975
 
 
 TAip Java SDK目录结构
