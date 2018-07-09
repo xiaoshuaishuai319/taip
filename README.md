@@ -1,15 +1,15 @@
-[![Version](https://img.shields.io/badge/version-4.3.1-brightgreen.svg)](http://mvnrepository.com/search?q=taip)
-[![Download](https://img.shields.io/badge/download-v4.3.1jar-brightgreen.svg)](https://oss.sonatype.org/service/local/artifact/maven/redirect?r=releases&g=cn.xsshome&a=taip&v=4.3.1&e=jar)
+[![Version](https://img.shields.io/badge/version-4.3.2-brightgreen.svg)](http://mvnrepository.com/search?q=taip)
+[![Download](https://img.shields.io/badge/download-v4.3.2jar-brightgreen.svg)](https://oss.sonatype.org/service/local/artifact/maven/redirect?r=releases&g=cn.xsshome&a=taip&v=4.3.2&e=jar)
 [![License](http://img.shields.io/:license-apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
 [![JDK 1.7](https://img.shields.io/badge/JDK-1.7-green.svg "JDK 1.7")]()
 [![WiKi](https://img.shields.io/readthedocs/pip.svg)](https://apidoc.gitee.com/xshuai/taip/)
 [![作者](https://img.shields.io/badge/%E4%BD%9C%E8%80%85-%E5%B0%8F%E5%B8%85%E4%B8%B6-7AD6FD.svg)](https://www.xsshome.cn/)
 
+# 最新代码更新在码云(Gitee):https://gitee.com/xshuai/taip/ QQ:783021975
+
 文档请移步:[http://taip.mydoc.io/](http://taip.mydoc.io/)
 
 APPID APPKEY 是腾讯AI创建应用后得到。请移步腾讯AI官网获取哦。[https://ai.qq.com/](https://ai.qq.com/)
-
-最新代码更新在码云(Gitee):https://gitee.com/xshuai/taip/ QQ:783021975
 
 QQ:783021975
 
@@ -146,6 +146,8 @@ public class Sample {
         String result = aipSpeech.TtsSynthesis(text, 1, 3);//语音合成（AI Lab） 默认参数
         String result = aipSpeech.TtsSynthesis(text,1,3,0,100,0,58);//语音合成（AI Lab） 全部参数
         String result = aipSpeech.asrLong("G:/16.pcm", 1, "http://yourwebsitename.com/methodname");//长语音识别
+        String result = aipSpeech.aaiDetectkeywordBySpeech(filePath, 1, "http://www.xxxxx.com//txnotify", "小",8000);//关键词检索基于本地语音文件
+        String result = aipSpeech.aaiDetectkeywordBySpeechURL("http://www.xxxxx.com/audio.pcm", 1, "http://www.xxxxx.com//txnotify", "小",8000);//关键词检索基于语音URL文件
         System.out.println(result);
     }
 }
