@@ -52,15 +52,34 @@ cn.xsshome.taip
 
 其中，version为版本号，添加完成后，用户就可以在工程中使用腾讯AIJava SDK。    
 
-### maven引入
+-------------------------------------------------------------------------------
 
-```
+## 安装
+
+### Maven
+在项目的pom.xml的dependencies中加入以下内容:
+
+```xml
 <dependency>
   <groupId>cn.xsshome</groupId>
   <artifactId>taip</artifactId>
   <version>4.3.2</version>
 </dependency>
 ```
+### Gradle
+```
+compile 'cn.xsshome:taip:4.3.2'
+```
+
+### 非Maven项目
+
+点击以下任一链接，下载`taip-x.x.x.jar`即可：
+
+- [Maven中央库1](http://central.maven.org/maven2/cn/xsshome/taip/4.3.2/taip-4.3.2.jar)
+- [Maven中央库2](http://repo1.maven.org/maven2/cn/xsshome/taip/4.3.2/taip-4.3.2.jar)
+
+-------------------------------------------------------------------------------
+## 使用示例代码
 ### 网络设置示例代码
 
 ```
