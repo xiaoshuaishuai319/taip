@@ -1,3 +1,4 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/77d72d906e1840a2ba88616fc07212c3)](https://app.codacy.com/gh/xiaoshuaishuai319/taip?utm_source=github.com&utm_medium=referral&utm_content=xiaoshuaishuai319/taip&utm_campaign=Badge_Grade_Settings)
 [![Version](https://img.shields.io/badge/version-4.3.2-brightgreen.svg)](http://mvnrepository.com/search?q=taip)
 [![Download](https://img.shields.io/badge/download-v4.3.2jar-brightgreen.svg)](https://oss.sonatype.org/service/local/artifact/maven/redirect?r=releases&g=cn.xsshome&a=taip&v=4.3.2&e=jar)
 [![License](http://img.shields.io/:license-apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
